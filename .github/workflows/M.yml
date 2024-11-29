@@ -1,10 +1,10 @@
 name: macOS
 on:
- workflow dispatch: 
+ workflow_dispatch:
 defaults:
  run:
-  shell: bash  
-Jobs:
+  shell: bash
+jobs:
  build:
   runs-on: macos-latest
   steps:
@@ -15,5 +15,5 @@ Jobs:
     run: source setup.sh "Alone215" "Alone215" "SNGROK_AUTH_TOKEN"
   - name: ngrok is now listening to VINC connections on...
     run: curl-silent http://127.0.0.1:4040/api/tunnels | jq tunnels[0].public_url
-    name: Setup teate Session
-    uses: mxschmitt/action-tmate@v2
+  - name: Setup teate Session
+  - uses: mxschmitt/action-tmate@v2
