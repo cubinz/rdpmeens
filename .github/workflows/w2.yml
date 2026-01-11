@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: windows-latest
-    timeout-minutes: 60  # Set a reasonable timeout
+    timeout-minutes: 999999  # Set a reasonable timeout
 
     steps:
     - name: Download Ngrok
